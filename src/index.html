@@ -3,38 +3,61 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Adventures of GitHub with AI</title>
+  <title>Adventures of GitHub with AI — Field Log</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,700;9..144,900&family=Spline+Sans+Mono:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header class="card">
-    <h1>Adventures of GitHub with AI</h1>
-    <p id="greeting">Loading your greeting… 👋</p>
-    <p id="git-tip" class="tip"></p>
-  </header>
+  <div class="masthead">
+    <p class="eyebrow">Field Log — Entry 001</p>
+    <h1>Adventures of <span class="accent">GitHub</span> &amp; AI</h1>
+    <p class="logline" id="greeting">Logging in…</p>
+    <p class="margin-note" id="git-tip"></p>
+    <p class="stamp" aria-hidden="true">BRANCH: restructure/src-folder</p>
+  </div>
 
   <main>
-    <section class="card">
-      <h2>Pomodoro mini-timer</h2>
-      <div id="timer" class="timer">25:00</div>
+    <section class="card stopwatch" aria-labelledby="stopwatch-title">
+      <header class="card-label">
+        <h2 id="stopwatch-title">The Stopwatch</h2>
+        <span class="rule">25-min focus sprint</span>
+      </header>
+
+      <div class="dial">
+        <svg class="ring" viewBox="0 0 120 120" role="img" aria-label="Time remaining ring">
+          <circle class="ring-track" cx="60" cy="60" r="52" />
+          <circle class="ring-progress" id="ring-progress" cx="60" cy="60" r="52" />
+        </svg>
+        <span class="dial-time" id="timer">25:00</span>
+      </div>
+
       <div class="controls">
-        <button id="start">Start</button>
-        <button id="reset">Reset</button>
+        <button class="btn primary" id="start" type="button">Start</button>
+        <button class="btn ghost" id="reset" type="button">Reset</button>
       </div>
     </section>
 
-    <section class="card">
-      <h2>To-do list (saves automatically)</h2>
+    <section class="card checklist" aria-labelledby="checklist-title">
+      <header class="card-label">
+        <h2 id="checklist-title">The Checklist</h2>
+        <span class="rule" id="todo-count">0 open tasks</span>
+      </header>
+
       <form id="todo-form" autocomplete="off">
-        <input id="todo-input" type="text" placeholder="What needs doing?" />
-        <button type="submit">Add</button>
+        <label class="sr-only" for="todo-input">New checklist item</label>
+        <input id="todo-input" type="text" placeholder="Add a task, strike it, commit it…" />
+        <button class="btn primary small" type="submit" aria-label="Add task">＋ Add</button>
       </form>
+
       <ul id="todo-list"></ul>
+      <p class="margin-note kudos" id="todo-kudos"></p>
     </section>
   </main>
 
-  <footer class="card">
-    <small>Made with 💛 by <a href="https://github.com/WhitneyTheByteWiz">WhitneyTheByteWiz</a></small>
+  <footer class="colophon">
+    <p>typed by <a href="https://github.com/WhitneyTheByteWiz">WhitneyTheByteWiz</a> · notes in pencil, code in ink</p>
   </footer>
 
   <script src="js/main.js"></script>
