@@ -10,6 +10,18 @@ This is a hands-on practice space where I learn and apply:
 - 💻 **GitHub features** — repos, pull requests, issues, actions
 - 🤖 **AI pair-programming** — using AI assistants to explore and build
 
+## 📁 Project structure
+
+```
+adventures-of-github-with-ai/
+├── src/                  # all code lives here
+│   ├── index.html        # page markup
+│   ├── css/style.css     # styles
+│   ├── js/main.js        # scripts
+│   └── README.md         # notes about src/
+└── README.md             # this file
+```
+
 ## 📌 How to use this repo
 
 Clone it and explore!
@@ -22,8 +34,8 @@ git clone https://github.com/WhitneyTheByteWiz/adventures-of-github-with-ai.git
 
 - [x] Created repo
 - [x] First commit
-- [ ] Learn branches
-- [ ] Open first pull request
+- [x] Learn branches
+- [x] Open first pull request (this work)
 
 ---
 
