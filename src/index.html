@@ -7,7 +7,35 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <h1>Adventures of GitHub with AI</h1>
+  <header class="card">
+    <h1>Adventures of GitHub with AI</h1>
+    <p id="greeting">Loading your greeting… 👋</p>
+    <p id="git-tip" class="tip"></p>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2>Pomodoro mini-timer</h2>
+      <div id="timer" class="timer">25:00</div>
+      <div class="controls">
+        <button id="start">Start</button>
+        <button id="reset">Reset</button>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>To-do list (saves automatically)</h2>
+      <form id="todo-form" autocomplete="off">
+        <input id="todo-input" type="text" placeholder="What needs doing?" />
+        <button type="submit">Add</button>
+      </form>
+      <ul id="todo-list"></ul>
+    </section>
+  </main>
+
+  <footer class="card">
+    <small>Made with 💛 by <a href="https://github.com/WhitneyTheByteWiz">WhitneyTheByteWiz</a></small>
+  </footer>
 
   <script src="js/main.js"></script>
 </body>
